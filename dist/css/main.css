@@ -64,8 +64,7 @@ input[class^="btn-"]:hover {
   margin: 0 auto 2rem auto; }
 
 #project-section {
-  margin: 2rem;
-  padding: 4em; }
+  margin-bottom: 2rem; }
   #project-section .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,7 +72,8 @@ input[class^="btn-"]:hover {
     cursor: pointer; }
   #project-section .more-soon {
     text-align: center;
-    margin: auto; }
+    margin: auto;
+    cursor: default; }
   #project-section .item {
     position: relative;
     overflow: hidden;
@@ -97,7 +97,7 @@ input[class^="btn-"]:hover {
         background-color: black;
         padding: 0.5rem 0.7rem; }
       #project-section .item-text .additional p {
-        margin: 20px 0; }
+        margin: 20% 0; }
       #project-section .item-text .additional a {
         display: inline-block;
         background-color: white;
@@ -218,3 +218,24 @@ img {
     opacity: 0.75; }
   100% {
     opacity: 1; } }
+
+#main-footer {
+  background-color: #333;
+  color: white;
+  height: 5rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab {
+      margin-right: 1rem;
+      border: 2px white solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem; }
+      #main-footer .footer-content .social .fab:hover {
+        background-color: #ffbc00; }

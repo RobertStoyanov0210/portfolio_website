@@ -1,6 +1,5 @@
 #project-section {
-  margin: 2rem;
-  padding: 4em;
+  margin-bottom: 2rem;
   .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -10,6 +9,7 @@
   .more-soon {
     text-align: center;
     margin: auto;
+    cursor: default;
   }
   .item {
     position: relative;
@@ -38,7 +38,7 @@
       }
       .additional {
         p {
-          margin: 20px 0;
+          margin: 20% 0;
         }
         a {
           display: inline-block;
@@ -61,8 +61,6 @@
     img {
       transform: translate3d(0, 0, 0) scale(1);
       opacity: 0.4;
-    }
-    .item-text::before {
     }
     .additional {
       opacity: 1;

@@ -100,7 +100,7 @@ img {
         }
       }
     }
-
+    // Little arrow at the bottom of header-content
     .down-arrow {
       position: absolute;
       width: 1rem;
@@ -143,5 +143,35 @@ img {
   }
 
   &-inner {
+  }
+}
+
+// Footer
+
+#main-footer {
+  background-color: $dark-color;
+  color: white;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px white solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $main-color;
+      }
+    }
   }
 }
