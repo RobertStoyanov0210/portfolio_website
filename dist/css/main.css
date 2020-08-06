@@ -219,10 +219,55 @@ img {
   100% {
     opacity: 1; } }
 
+#header-inner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/showcase.jpg") 100% 54%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 3px solid #ffbc00;
+  height: 5.5rem; }
+
+#contact-a .text-fields {
+  display: grid;
+  grid-template-areas: "name email" "subject phone" "message message";
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem; }
+  #contact-a .text-fields .name-input {
+    grid-area: name; }
+  #contact-a .text-fields .subject-input {
+    grid-area: subject; }
+  #contact-a .text-fields .email-input {
+    grid-area: email; }
+  #contact-a .text-fields .phone-input {
+    grid-area: phone; }
+  #contact-a .text-fields .message-input {
+    grid-area: message;
+    height: 150px;
+    max-width: 100%; }
+  #contact-a .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact-a button[type="submit"] {
+  float: right;
+  width: 15%;
+  height: 50px; }
+
+#contact-b .contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center; }
+
+#contact-c h1 {
+  text-align: center;
+  font-size: 4rem; }
+
 #main-footer {
   background-color: #333;
   color: white;
   height: 5rem; }
+  #main-footer a {
+    color: white; }
   #main-footer .footer-content {
     display: flex;
     justify-content: space-between;
