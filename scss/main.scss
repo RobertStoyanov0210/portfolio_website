@@ -1,0 +1,147 @@
+@import "config";
+@import "utilities";
+@import "project_section";
+
+// General Styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+// Logo
+#logo {
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+// Main Nav
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+    margin: 1rem;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+
+// Header
+#header {
+  &-home {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      $bg-image;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height: 100vh;
+    color: white;
+
+    .header-content {
+      text-align: center;
+      padding-top: 15%;
+
+      h1 {
+        font-size: 4.8rem;
+        line-height: 1.2;
+      }
+      .txt-type {
+        .txt {
+          border-right: 3px solid $main-color;
+          padding-right: 5px;
+        }
+      }
+    }
+
+    .down-arrow {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      left: 50%;
+      bottom: 1.5rem;
+      border: 3px solid transparent;
+      border-right-color: $light-color;
+      border-bottom-color: $light-color;
+      transform: rotate(45deg);
+      animation: arrow-animation 1s alternate infinite;
+    }
+    .down-arrow:hover {
+      animation: none;
+      cursor: pointer;
+    }
+    .down-arrow:after {
+      content: "";
+      padding-top: 50px;
+      left: -25px;
+      top: -25px;
+    }
+    @keyframes arrow-animation {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 0.25;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      75% {
+        opacity: 0.75;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-inner {
+  }
+}
