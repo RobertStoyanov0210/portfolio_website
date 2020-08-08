@@ -1,6 +1,4 @@
-const links = document.querySelectorAll(
-  "header a .down-arrow, .header-content a"
-);
+const links = document.querySelectorAll("header .down-arrow");
 
 $(links).on("click", function (e) {
   e.preventDefault();

@@ -1,0 +1,122 @@
+// Tablets & Smaller
+@media (max-width: 780px) {
+  #main-nav li {
+    font-size: 1rem;
+  }
+  #header-home {
+    height: 30rem;
+
+    .header-content {
+      padding-top: 5rem;
+      h1 {
+        font-size: 3.2rem;
+      }
+    }
+    .down-arrow {
+      display: none;
+    }
+  }
+}
+// Smartphones
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 3px solid $main-color;
+      background-position: 100% 54%;
+      .header-content {
+        display: none;
+      }
+    }
+
+    &-inner {
+      height: 10rem;
+    }
+  }
+  .more-soon {
+    display: none;
+  }
+  .items {
+    grid-template-areas: "project project project";
+    .item {
+      grid-area: project;
+    }
+  }
+
+  // Contact
+  #contact-form {
+    .text-fields {
+      grid-template-areas:
+        "name"
+        "subject"
+        "email"
+        "phone"
+        "message";
+    }
+
+    button[type="submit"] {
+      float: none;
+      width: 100%;
+    }
+  }
+  #contact-info {
+    .contact-info {
+      grid-template-columns: 1fr;
+      div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+      h3 {
+        margin-bottom: 0;
+      }
+      .fa-phone,
+      .fa-address-card {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+  #contact-tagline {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+    }
+  }
+}
+// Landscape
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 2rem;
+    }
+  }
+}
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      font-size: 1rem;
+    }
+  }
+}

@@ -69,7 +69,7 @@ input[class^="btn-"]:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    cursor: pointer; }
+    cursor: default; }
   #project-section .more-soon {
     text-align: center;
     margin: auto;
@@ -106,7 +106,13 @@ input[class^="btn-"]:hover {
         border-radius: 4px; }
     #project-section .item .additional {
       opacity: 0;
-      transition: all 0.5s; }
+      transition: all 0.5s;
+      justify-content: center; }
+      #project-section .item .additional a:last-child {
+        background: none;
+        border: 1px solid white;
+        color: white;
+        margin-left: 10px; }
   #project-section .item:hover {
     background-color: black; }
     #project-section .item:hover img {
@@ -293,3 +299,72 @@ img {
       padding: 0.5rem; }
       #main-footer .footer-content .social .fab:hover {
         background-color: #ffbc00; }
+
+@media (max-width: 780px) {
+  #main-nav li {
+    font-size: 1rem; }
+  #header-home {
+    height: 30rem; }
+    #header-home .header-content {
+      padding-top: 5rem; }
+      #header-home .header-content h1 {
+        font-size: 3.2rem; }
+    #header-home .down-arrow {
+      display: none; } }
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center; }
+    #main-nav li {
+      padding: 1rem; }
+  #header-home {
+    height: 10rem;
+    border-bottom: 3px solid #ffbc00;
+    background-position: 100% 54%; }
+    #header-home .header-content {
+      display: none; }
+  #header-inner {
+    height: 10rem; }
+  .more-soon {
+    display: none; }
+  .items {
+    grid-template-areas: "project project project"; }
+    .items .item {
+      grid-area: project; }
+  #contact-form .text-fields {
+    grid-template-areas: "name" "subject" "email" "phone" "message"; }
+  #contact-form button[type="submit"] {
+    float: none;
+    width: 100%; }
+  #contact-info .contact-info {
+    grid-template-columns: 1fr; }
+    #contact-info .contact-info div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px #555 solid; }
+      #contact-info .contact-info div:last-child {
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0; }
+    #contact-info .contact-info h3 {
+      margin-bottom: 0; }
+    #contact-info .contact-info .fa-phone,
+    #contact-info .contact-info .fa-address-card {
+      margin-top: 1.2rem; }
+  #contact-tagline h1 {
+    font-size: 2rem; }
+  #main-footer {
+    height: 7rem; }
+    #main-footer .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem; } }
+
+@media (max-height: 580px) {
+  #header-home .header-content {
+    padding-top: 2rem; } }
+
+@media (max-height: 330px) {
+  #header-home .header-content {
+    font-size: 1rem; } }
