@@ -16,6 +16,33 @@
       display: none;
     }
   }
+  #project-section {
+    .items {
+      .item {
+        background-color: black;
+        h3 {
+          font-weight: normal;
+          padding: 0.4rem 0.6rem;
+        }
+        .additional {
+          p {
+            margin: 10% 0;
+          }
+        }
+      }
+    }
+  }
+  #about-section {
+    .about-info {
+    }
+    img {
+      height: 350px;
+      margin: 50% 0;
+    }
+    .bio {
+      margin: 0 1rem;
+    }
+  }
 }
 // Smartphones
 @media (max-width: 500px) {
@@ -48,6 +75,37 @@
     grid-template-areas: "project project project";
     .item {
       grid-area: project;
+    }
+  }
+  #project-section {
+    .items {
+      .item {
+        h3 {
+          font-weight: bold;
+          padding: 0.5rem 0.7rem;
+        }
+        .additional {
+          p {
+            margin: 15% 1%;
+          }
+        }
+      }
+    }
+  }
+
+  #about-section {
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+    .about-info {
+    }
+    img {
+      display: none;
+    }
+    .bio {
+      margin: 0;
+      border: none;
     }
   }
 

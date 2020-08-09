@@ -156,6 +156,25 @@ img {
   }
 }
 
+// About Section
+#about-section {
+  .about-info {
+    display: flex;
+    margin: 3rem;
+    img {
+      width: 22%;
+    }
+  }
+  .bio {
+    border-left: 3px solid $main-color;
+    margin: 0 3rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: $light-color;
+    text-align: center;
+  }
+}
+
 // Contact Page
 #contact {
   &-form {

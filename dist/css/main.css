@@ -70,55 +70,57 @@ input[class^="btn-"]:hover {
     grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     cursor: default; }
-  #project-section .more-soon {
-    text-align: center;
-    margin: auto;
-    cursor: default; }
-  #project-section .item {
-    position: relative;
-    overflow: hidden;
-    background-color: #ffbc00;
-    transition: background-color 0.5s; }
-    #project-section .item img {
-      max-width: 100%;
-      opacity: 0.7;
-      transition: all 0.5s; }
-    #project-section .item-text {
-      position: absolute;
-      width: 100%;
-      padding-top: 1rem;
-      top: 0;
-      color: white;
-      text-align: center; }
-      #project-section .item-text h3 {
-        font-weight: bold;
-        display: inline-block;
-        background-color: black;
-        padding: 0.5rem 0.7rem; }
-      #project-section .item-text .additional p {
-        margin: 20% 0; }
-      #project-section .item-text .additional a {
-        display: inline-block;
-        background-color: white;
-        padding: 0.5rem;
-        color: black;
-        font-weight: bold;
-        border-radius: 4px; }
-    #project-section .item .additional {
-      opacity: 0;
-      transition: all 0.5s;
-      justify-content: center; }
-      #project-section .item .additional a:last-child {
-        background: none;
-        border: 1px solid white;
+    #project-section .items .more-soon {
+      text-align: center;
+      margin: auto;
+      cursor: default; }
+    #project-section .items .item {
+      position: relative;
+      overflow: hidden;
+      background-color: #ffbc00;
+      transition: background-color 0.5s; }
+      #project-section .items .item img {
+        max-width: 100%;
+        opacity: 0.7;
+        transition: all 0.5s; }
+      #project-section .items .item-text {
+        position: absolute;
+        width: 100%;
+        padding-top: 1rem;
+        top: 0;
         color: white;
-        margin-left: 10px; }
-  #project-section .item:hover {
-    background-color: black; }
-    #project-section .item:hover img {
-      opacity: 0.4; }
-    #project-section .item:hover .additional {
-      opacity: 1; }
+        text-align: center; }
+        #project-section .items .item-text h3 {
+          font-weight: bold;
+          display: inline-block;
+          background-color: black;
+          padding: 0.5rem 0.7rem; }
+        #project-section .items .item-text .additional {
+          transition: all 0.5s;
+          justify-content: center; }
+          #project-section .items .item-text .additional p {
+            margin: 15% 0; }
+          #project-section .items .item-text .additional a {
+            display: inline-block;
+            background-color: white;
+            padding: 0.5rem;
+            color: black;
+            font-weight: bold;
+            border-radius: 4px; }
+          #project-section .items .item-text .additional a:last-child {
+            background: none;
+            border: 1px solid white;
+            color: white;
+            margin-left: 10px; }
+  @media (min-width: 780px) {
+    #project-section .additional {
+      opacity: 0; }
+    #project-section .item:hover {
+      background-color: black; }
+      #project-section .item:hover img {
+        opacity: 0.4; }
+      #project-section .item:hover .additional {
+        opacity: 1; } }
 
 * {
   margin: 0;
@@ -231,9 +233,23 @@ img {
   border-bottom: 3px solid #ffbc00;
   height: 5.5rem; }
 
+#about-section .about-info {
+  display: flex;
+  margin: 3rem; }
+  #about-section .about-info img {
+    width: 22%; }
+
+#about-section .bio {
+  border-left: 3px solid #ffbc00;
+  margin: 0 3rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #f4f4f4;
+  text-align: center; }
+
 #contact-form .text-fields {
   display: grid;
-  grid-template-areas: "name email" "subject phone" "message message";
+  grid-template-areas: "name email" "subject phone" "message message";
   grid-gap: 1.2rem;
   margin-bottom: 1.2rem; }
   #contact-form .text-fields .name-input {
@@ -310,7 +326,19 @@ img {
       #header-home .header-content h1 {
         font-size: 3.2rem; }
     #header-home .down-arrow {
-      display: none; } }
+      display: none; }
+  #project-section .items .item {
+    background-color: black; }
+    #project-section .items .item h3 {
+      font-weight: normal;
+      padding: 0.4rem 0.6rem; }
+    #project-section .items .item .additional p {
+      margin: 10% 0; }
+  #about-section img {
+    height: 350px;
+    margin: 50% 0; }
+  #about-section .bio {
+    margin: 0 1rem; } }
 
 @media (max-width: 500px) {
   #main-nav {
@@ -332,8 +360,21 @@ img {
     grid-template-areas: "project project project"; }
     .items .item {
       grid-area: project; }
+  #project-section .items .item h3 {
+    font-weight: bold;
+    padding: 0.5rem 0.7rem; }
+  #project-section .items .item .additional p {
+    margin: 15% 1%; }
+  #about-section .container {
+    margin: 0;
+    padding: 0; }
+  #about-section img {
+    display: none; }
+  #about-section .bio {
+    margin: 0;
+    border: none; }
   #contact-form .text-fields {
-    grid-template-areas: "name" "subject" "email" "phone" "message"; }
+    grid-template-areas: "name" "subject" "email" "phone" "message"; }
   #contact-form button[type="submit"] {
     float: none;
     width: 100%; }
